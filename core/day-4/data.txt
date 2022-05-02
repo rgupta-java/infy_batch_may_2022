@@ -1,0 +1,4 @@
+A Regular Expression or Regex is a special sequence
+ of characters that help in matching or finding other 
+ strings or set of strings, using a specialized syntax Regex are used in searching
+editing and manipulating the tex
