@@ -6,8 +6,9 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
+import com.common.Employee;
 import com.common.EmployeeDTO;
-import com.day5.session2.Employee;
+
 class Singer{
 	private String singerName;
 	private int rank;	//1-5 or else bad singer

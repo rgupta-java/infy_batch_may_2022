@@ -6,6 +6,14 @@ public class Employee {
 	private double salary;
 	private String dept;
 	
+	////T---> boolean
+	public boolean isRich() {
+		return salary>=3000000;
+	}
+	
+	public boolean isWorkingInIt() {
+		return dept.equals("IT");
+	}
 	public int getId() {
 		return id;
 	}

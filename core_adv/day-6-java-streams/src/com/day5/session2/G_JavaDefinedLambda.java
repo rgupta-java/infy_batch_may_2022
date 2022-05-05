@@ -2,6 +2,8 @@ package com.day5.session2;
 import java.util.*;
 //what is funcational interface? sinle abstract method
 
+import com.common.Employee;
+
 
 public class G_JavaDefinedLambda {
 	
@@ -14,8 +16,6 @@ public class G_JavaDefinedLambda {
 				new Employee(199, "tarun", 90000, "Sales")
 			);
 		
-		//Comparable vs comprator
-		
 		Collections.sort(employees, new Comparator<Employee>() {
 
 			@Override
@@ -24,21 +24,29 @@ public class G_JavaDefinedLambda {
 			}
 		});
 		
-		//lambda--Attempt1
-//		Collections.sort(employees, (Employee o1, Employee o2) ->{
-//				return Double.compare(o2.getSalary(), o1.getSalary());
-//			
-//		});
-		//lambda--Attempt2
-//		Collections.sort(employees, (Employee o1, Employee o2) ->
-//		Double.compare(o2.getSalary(), o1.getSalary()));
+		//1-ist attempt
 		
-		//lambda--Attempt3
-		Collections.sort(employees, ( o1,  o2) ->Double.compare(o2.getSalary(), o1.getSalary()));
+		Collections.sort(employees, (Employee o1, Employee o2)-> {
+				return Double.compare(o2.getSalary(), o1.getSalary());
+			
+		});
 		
-		//print them
-		for(Employee employee: employees)
-			System.out.println(employee);
+		
+
+		//2-2nd attempt
+		
+		Collections.sort(employees, (Employee o1, Employee o2)-> 
+				 Double.compare(o2.getSalary(), o1.getSalary())
+		);
+		
+	//3-3nd attempt
+		
+		Collections.sort(employees, ( o1,  o2)-> Double.compare(o2.getSalary(), o1.getSalary()));
+		
+		for(Employee emp: employees) {
+			System.out.println(emp);
+		}
+		
 	}
 
 }
